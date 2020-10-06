@@ -1,0 +1,96 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.subtitle {
+  height: 55vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-attachment: fixed;
+  color: #ffffff;
+  background-image: url("../images/sub tilte.jpg");
+  background-size: 100%;
+  background-position: top;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  -webkit-animation: header-animate 1s linear infinite alternate;
+          animation: header-animate 1s linear infinite alternate;
+  background-repeat: no-repeat;
+}
+
+@-webkit-keyframes header-animate {
+  from {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  to {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+}
+
+@keyframes header-animate {
+  from {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  to {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+}
+
+.subtitle h1,
+.subtitle p {
+  -webkit-animation: ting-tong 1s linear infinite alternate;
+          animation: ting-tong 1s linear infinite alternate;
+}
+
+@-webkit-keyframes ting-tong {
+  from {
+    color: #ffffff;
+  }
+  to {
+    color: #000000;
+  }
+}
+
+@keyframes ting-tong {
+  from {
+    color: #ffffff;
+  }
+  to {
+    color: #000000;
+  }
+}
+
+.subtitle:hover {
+  -webkit-filter: grayscale(1%);
+          filter: grayscale(1%);
+  -webkit-animation: none;
+          animation: none;
+}
+
+@media screen and (max-width: 977px) {
+  .subtitle {
+    background-size: 100% 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

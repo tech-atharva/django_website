@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block body %}
+<h1 class="text-center">Contact</h1>
+<div class="px-0 container-fuild my-3">
+  <form method="POST" action="/contact/">
+    {% csrf_token %}
+    <input
+      class="form-control my-1"
+      type="text"
+      placeholder="Enter your name"
+      name="name"
+    />
+    <input
+      class="form-control my-1"
+      type="email"
+      placeholder="Enter your email"
+      name="email"
+    />
+    <input
+      class="form-control my-1"
+      type="tel"
+      placeholder="Enter your phone number"
+      name="phone"
+    />
+    <textarea
+      class="form-control my-1"
+      style="height: 15rem"
+      placeholder="Enter your massage"
+      name="massage"
+    ></textarea>
+    <center class="my-1">
+      <button type="submit" class="btn btn-primary">Send</button>
+    </center>
+  </form>
+</div>
+{% endblock body %}

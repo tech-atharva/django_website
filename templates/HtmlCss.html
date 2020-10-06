@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block body %}
+<div class="bg-light p-5 text-center">
+  <div class="container">
+    <h1 class="text-center my-3">Html Css and Javascript static Website</h1>
+    <hr />
+  </div>
+  <img src="/static/images/html.jpg" alt="" class="img-fluid" />
+  <div class="container my-5">
+    <h1>All comments for Html Css and Javascript</h1>
+    <form
+      action="/services/HtmlCssandJavascript/"
+      class="my-5 bg-dark p-3"
+      method="post"
+    >
+      {% csrf_token %}
+      <input
+        type="email"
+        placeholder="Enter your Email adress"
+        class="form-control my-3"
+        name="email"
+      />
+      <textarea
+        placeholder="Enter your Massage"
+        class="form-control my-3"
+        style="height: 15rem"
+        name="message"
+      ></textarea>
+      <center>
+        <button
+          type="submit"
+          class="btn btn-outline-primary px-4 py-2"
+          style="font-size: 1.5rem"
+        >
+          Send
+        </button>
+      </center>
+    </form>
+    {% for temp in data %}
+    <div class="bg-dark text-light pt-5 my-3">
+      <div class="container">
+        <p class="text-left my-0">{{temp.massage}}</p>
+        <br />
+        <h5 class="text-right">by -{{temp.email}}</h5>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock body %}

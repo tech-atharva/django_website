@@ -1,0 +1,6 @@
+{
+    "python.formatting.provider": "black",
+    "editor.mouseWheelZoom": true,
+    "debug.console.fontSize": 12,
+    "markdown.preview.fontFamily": "fira code"
+}
